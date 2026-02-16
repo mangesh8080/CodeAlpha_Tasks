@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Image Gallery</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<button id="darkModeBtn">Enable Dark Mode</button>
+
+<div class="filters">
+  <button class="active" onclick="filterImages('all', this)">All</button>
+  <button onclick="filterImages('nature', this)">Nature</button>
+  <button onclick="filterImages('city', this)">City</button>
+  <button onclick="filterImages('animals', this)">Animals</button>
+</div>
+
+<div class="gallery">
+  <img src="https://picsum.photos/id/1015/600/400" class="nature" onclick="openLightbox(0)">
+  <img src="https://picsum.photos/id/1016/600/400" class="nature" onclick="openLightbox(1)">
+  <img src="https://picsum.photos/id/1020/600/400" class="city" onclick="openLightbox(2)">
+  <img src="https://picsum.photos/id/1025/600/400" class="animals" onclick="openLightbox(3)">
+  <img src="https://picsum.photos/id/1035/600/400" class="city" onclick="openLightbox(4)">
+  <img src="https://picsum.photos/id/237/600/400" class="animals" onclick="openLightbox(5)">
+</div>
+
+
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+  <div class="controls">
+    <button onclick="prevImage()">Prev</button>
+    <button onclick="nextImage()">Next</button>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
